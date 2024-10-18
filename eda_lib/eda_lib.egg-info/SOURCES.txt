@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+eda_lib/__init__.py
+eda_lib/eda_func_1.py
+eda_lib.egg-info/PKG-INFO
+eda_lib.egg-info/SOURCES.txt
+eda_lib.egg-info/dependency_links.txt
+eda_lib.egg-info/requires.txt
+eda_lib.egg-info/top_level.txt

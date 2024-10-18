@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: eda_lib
+Version: 1.0
+Summary: Small set of tools for EDA
+Author: Matias Borrell, Nastia Cher, Soledad Monge
+Author-email: anastasiia.chernavskaia@bse.eu, soledad.monge@bse.eu, matias.borrell@bse.eu
+License: MIT
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
