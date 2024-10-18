@@ -17,7 +17,7 @@ from sklearn.preprocessing import OneHotEncoder,StandardScaler
 # In[27]:
 
 
-def load_data(data):
+def load_data(data:pd.DataFrame):
     df_1 = pd.read_csv(data)
     return df_1
 
@@ -27,7 +27,7 @@ def load_data(data):
 # In[28]:
 
 
-def split_data(df_1):
+def split_data(df_1:pd.DataFrame):
     train_df, test_df = train_test_split(df_1, test_size=0.3, random_state=42)
     return train_df, test_df
 
@@ -37,7 +37,7 @@ def split_data(df_1):
 # In[29]:
 
 
-def remove_nan(df_1, column_list):
+def remove_nan(df_1:pd.DataFrame, column_list:list):
     df_2 = df_1.dropna(subset=column_list)
     return df_2
 
@@ -47,7 +47,7 @@ def remove_nan(df_1, column_list):
 # In[30]:
 
 
-def fill_nan(df_2, column_list):
+def fill_nan(df_2:pd.DataFrame, column_list:list):
     for column in column_list:
         df_2.loc[:, column] = df_2[column].fillna(df_2[column].mean())
     return df_2
@@ -57,7 +57,7 @@ def fill_nan(df_2, column_list):
 
 # In[31]:
 
-def generate_dummies_hot_encoder(df_2, column_list):
+def generate_dummies_hot_encoder(df_2:pd.DataFrame, column_list:list):
     # Apply one-hot encoding
     encoder = OneHotEncoder()
     encoded_data = encoder.fit_transform(df_2[column_list]).toarray()
@@ -79,7 +79,7 @@ def generate_dummies_hot_encoder(df_2, column_list):
 # In[32]:
 
 
-def binary_sex(df_3, sex_column):
+def binary_sex(df_3:pd.DataFrame, sex_column:str):
     df_3['gender_binary'] = df_3[sex_column].map({'M': 1, 'F': 0})
     return df_3
 
@@ -89,7 +89,7 @@ def binary_sex(df_3, sex_column):
 # In[33]:
 
 
-def train_model_LogisticRegresion(df_3, features_list, target_variable):
+def train_model_LogisticRegresion(df_3:pd.DataFrame, features_list:list, target_variable:str):
     X = df_3[features_list]
     y = df_3[target_variable]
 
@@ -118,7 +118,7 @@ def train_model_LogisticRegresion(df_3, features_list, target_variable):
 # In[34]:
 
 
-def predict_prob(X_train, X_test, model, df_3):
+def predict_prob(X_train, X_test, model, df_3:pd.DataFrame):
 # Predict the probabilities for both training and testing sets
     train_prob = model.predict_proba(X_train)[:, 1]  
     test_prob = model.predict_proba(X_test)[:, 1]    
