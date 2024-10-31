@@ -3,7 +3,7 @@ import os
 import pytest
 
 sys.path.append(os.path.abspath("../"))  
-from hw5_lib.hw5_lib.hw5 import Triangle, Rectangle, Circle
+from hw5_lib.hw5 import Triangle, Rectangle, Circle
 
 def test_triangle():
     triangle = Triangle(3, 4, 5, 4)
