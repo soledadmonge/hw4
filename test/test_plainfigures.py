@@ -2,8 +2,10 @@ import sys
 import os
 import pytest
 
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'hw5_lib', 'hw5_lib')))
+
 sys.path.append(os.path.abspath("../"))  
-from hw5_lib.hw5_lib.hw5 import Triangle, Rectangle, Circle
+from hw5 import Triangle, Rectangle, Circle
 
 def test_triangle():
     triangle = Triangle(3, 4, 5, 4)

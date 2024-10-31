@@ -1,8 +1,10 @@
-from hw4_lib.hw4 import count_simba
+import sys
+import os
 import pytest
 
-sys.path.append(os.path.abspath("../")) 
-from hw4_lib.hw4_lib.hw4 import count_simba
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'hw4_lib', 'hw4_lib')))
+from hw4 import count_simba
 
 def test_count_simba_three_times():
     list_of_strings = ["Simba is the king of the Pride Lands", "Simba is brave", "Simba"]

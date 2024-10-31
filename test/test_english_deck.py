@@ -1,10 +1,11 @@
-# %%
 import sys
 import os
 import pytest
 
-sys.path.append(os.path.abspath("../"))  
-from hw5_lib.hw5_lib.hw5 import Card, Deck
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'hw5_lib', 'hw5_lib')))
+
+sys.path.append(os.path.abspath("../")) 
+from hw5 import Card, Deck
 
 # %%
 def test__card():

@@ -1,8 +1,10 @@
 # %%
+from functools import reduce
+
 def count_simba(listofstrings,word): # Function takes a list of strings and counts how many times a certain word appears in the list\n",
     counts_list = list(map(lambda single_string: single_string.count(word), listofstrings)) # Outputs a list of numbers that represent the count of the word in each string\n",
     count = reduce(lambda x,y: x+y, counts_list) # Adds up the numbers in the list produced above\n",
-    print(f"The word '{word}' appears {count} times.")
+    return count
     #user_word = input(\"Enter word: \") #This line will run in a .py file, but need to change "Simba" in next line to user_word
 
 # %%

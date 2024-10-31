@@ -2,8 +2,9 @@ import sys
 import os
 import pytest
 
-sys.path.append(os.path.abspath("../"))  
-from hw5_lib.hw5_lib.hw5 import Patient
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'hw5_lib', 'hw5_lib')))
+
+from hw5 import Patient
 
 def test_add_test():
     patient = Patient(name='Matias', symptoms='Narcolepsy')

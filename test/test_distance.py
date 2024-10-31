@@ -1,10 +1,13 @@
 import sys
 import os
 import pytest
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'hw4_lib', 'hw4_lib')))
+sys.path.append(os.path.abspath("../")) 
+
 from geopy.distance import geodesic
 
-sys.path.append(os.path.abspath("../"))  
-from hw4_lib.hw4_lib.hw4 import compute_distance, sum_general_int_list
+from hw4 import compute_distance, sum_general_int_list
 
 # Tests for compute_distance function
 def test_compute_distance_basic():

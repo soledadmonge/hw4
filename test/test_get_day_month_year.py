@@ -1,9 +1,11 @@
+import sys
+import os
 import pytest
-import pandas as pd
-from datetime import datetime
 
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'hw5_lib', 'hw5_lib')))
 sys.path.append(os.path.abspath("../")) 
-from hw4_lib.hw4_lib import get_day_month_year  
+
+from hw4 import get_day_month_year  
 
 def test_get_day_month_year():
     dates = [
