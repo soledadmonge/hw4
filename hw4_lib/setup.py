@@ -8,5 +8,5 @@ setup(
     author_email='matias.borrell@bse.eu, nastia.cher@bse.eu, soledad.mong@bse.eu',
     url='https://github.com/ananstr/hw_5', 
     packages=find_packages(),
-    install_requires=[], 
+    install_requires=['geopy'], 
 )
