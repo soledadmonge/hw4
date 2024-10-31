@@ -1,6 +1,6 @@
 # %%
 sys.path.append(os.path.abspath("../hw5_lib"))  
-from hw5_lib.hw5 import plain_figures
+from hw5_lib.hw5_lib.hw5 import plain_figures
 
 import unittest
 from plane_figures import Triangle, Rectangle, Circle
