@@ -19,5 +19,3 @@ def test_circle():
     circle = Circle(2)
     assert pytest.approx(circle.compute_perimeter(), 0.001) == 12.5664
     assert pytest.approx(circle.compute_surface(), 0.001) == 12.5664
-
-
