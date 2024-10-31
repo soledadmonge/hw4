@@ -29,7 +29,7 @@ def test_has_covid_multiple_symptoms():
 def test_has_covid_positive_test():
     patient = Patient(name='Matias', symptoms='Narcolepsy')
     patient.add_test(test_name='covid', test_results=False)
-    assert patient.has_covid() == 0.01 "The probability with covid test False but no symptoms"
+    assert patient.has_covid() == 0.01,"The probability with covid test False but no symptoms"
     
 
 def test_has_covid_negative_test():
