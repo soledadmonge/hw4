@@ -15,6 +15,8 @@ class Patient:
         
     def has_covid(self):
         self.relevant_symptoms = ['fever', 'cough', 'anosmia']
+        self.covid_prob = 0.05  
+
         for i in self.test:
             if i[0] == 'covid' and i[1] == True:
                 self.covid_prob = 0.99
@@ -23,17 +25,17 @@ class Patient:
             if i[0] == 'covid' and i[1] == False:
                 self.covid_prob = 0.01
                 return self.covid_prob
-            
-            if any(symptom in self.symptoms for symptom in self.relevant_symptoms):
-                self.covid_prob = 0.05 
-                self.covid_symptoms_counter = 0
-                
-                for symptom in self.symptoms:
-                    if symptom in self.relevant_symptoms:
-                        self.covid_symptoms_counter += 1
-                self.covid_prob += 0.1 * self.covid_symptoms_counter
-                
-        return self.covid_prob 
+
+        if any(symptom in self.symptoms for symptom in self.relevant_symptoms):
+            self.covid_symptoms_counter = 0
+
+            for symptom in self.symptoms:
+                if symptom in self.relevant_symptoms:
+                    self.covid_symptoms_counter += 1
+
+            self.covid_prob += 0.1 * self.covid_symptoms_counter
+
+        return round(self.covid_prob,2)
 
 # Exercise 2. Card and Deck Class
 

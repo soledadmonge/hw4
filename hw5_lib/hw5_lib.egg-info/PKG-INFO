@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: hw5_lib
+Version: 0.1.0
+Summary: Library for hw5.py
+Home-page: https://github.com/ananstr/hw_5
+Author: Matias Borrell, Nastia Cher, Soledad Monge
+Author-email: matias.borrell@bse.eu, nastia.cher@bse.eu, soledad.mong@bse.eu
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
