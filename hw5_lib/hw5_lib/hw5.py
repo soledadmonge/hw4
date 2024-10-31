@@ -15,6 +15,7 @@ class Patient:
         
     def has_covid(self):
         self.relevant_symptoms = ['fever', 'cough', 'anosmia']
+        self.covid_prob = 0.05
         for i in self.test:
             if i[0] == 'covid' and i[1] == True:
                 self.covid_prob = 0.99
