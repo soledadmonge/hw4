@@ -1,7 +1,4 @@
 # %%
-
-pip install pytest
-
 sys.path.append(os.path.abspath("../hw5_lib"))  
 from hw5_lib.hw5 import plain_figures
 
