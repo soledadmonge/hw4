@@ -3,7 +3,7 @@ import os
 import pytest
 
 sys.path.append(os.path.abspath("../hw5_lib"))  
-from hw5_lib.hw5 import Patient
+from hw5_lib.hw5_lib.hw5 import Patient
 
 def test_add_test():
     patient = Patient(name='Matias', symptoms='Narcolepsy')
