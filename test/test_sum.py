@@ -2,8 +2,9 @@ import sys
 import os
 import pytest
 
-sys.path.append(os.path.abspath("../"))  
-from hw4_lib.hw4_lib.hw4 import compute_distance, sum_general_int_list
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'hw4_lib', 'hw4_lib')))
+
+from hw4 import compute_distance, sum_general_int_list
 
 # Tests for sum_general_int_list function
 def test_sum_general_int_list_basic():
