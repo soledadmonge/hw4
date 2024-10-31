@@ -1,1 +1,1 @@
-from .hw5 import Patient, Card, Deck, Triangle, Rectangle, Circle
+from .hw5 import *

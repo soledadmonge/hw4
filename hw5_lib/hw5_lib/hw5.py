@@ -20,11 +20,10 @@ class Patient:
         for i in self.test:
             if i[0] == 'covid' and i[1] == True:
                 self.covid_prob = 0.99
-                return self.covid_prob
             
             if i[0] == 'covid' and i[1] == False:
                 self.covid_prob = 0.01
-                return self.covid_prob
+            
 
         if any(symptom in self.symptoms for symptom in self.relevant_symptoms):
             self.covid_symptoms_counter = 0
@@ -34,6 +33,8 @@ class Patient:
                     self.covid_symptoms_counter += 1
 
             self.covid_prob += 0.1 * self.covid_symptoms_counter
+        if self.covid_prob > 1:
+            self.covid_prob = 1
 
         return round(self.covid_prob,2)
 
